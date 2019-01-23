@@ -1,0 +1,15 @@
+<button (click)="myMethod()">
+  Demo button
+</button>
+<h1 [class.red]="h1Style">helllo one</h1>
+<h3 [ngClass]="{
+  'blue': h3Style,
+  'large': !h3Style
+}">hello three
+</h3>
+<h1 [style.color]="h1Style ?  'red': 'blue'">helllo one</h1>
+<h3 [ngStyle]="{
+  'color': h1Style ? 'blue' : 'red',
+  'fontSize': !h3Style ? '40px' : '60px'
+}">hello three
+</h3>
