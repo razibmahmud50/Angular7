@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
+import { UsersInfo } from './users.model';
+import { Datas } from './datas.model';
+
 
 @Component({
   selector: 'app-home',
@@ -10,15 +13,20 @@ export class HomeComponent implements OnInit {
 
   h1Style = true;
   h3Style = false;
-  users: object;
+  user: any;
+  datas: Datas[];
+  userObj = new UsersInfo;
 
-  myMethod() {
-    this.data.firstClick();
+  constructor(private data: DataService) {
+
   }
 
-  constructor(private data: DataService) { }
-
   ngOnInit() {
+    this.user = {
+      name: this.userObj.name,
+      designation: this.userObj.designation,
+      address: this.userObj.address,
+    };
   }
 
 }

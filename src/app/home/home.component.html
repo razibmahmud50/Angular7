@@ -1,15 +1,22 @@
-<button (click)="myMethod()">
-  Demo button
-</button>
-<h1 [class.red]="h1Style">helllo one</h1>
-<h3 [ngClass]="{
-  'blue': h3Style,
-  'large': !h3Style
-}">hello three
-</h3>
-<h1 [style.color]="h1Style ?  'red': 'blue'">helllo one</h1>
-<h3 [ngStyle]="{
-  'color': h1Style ? 'blue' : 'red',
-  'fontSize': !h3Style ? '40px' : '60px'
-}">hello three
-</h3>
+<div class="container">
+  <p>My name is {{user.name}}</p>
+  <p>My designation is {{user.designation}}</p>
+  <p>My Address is {{user.address}}</p>
+  
+  <button (click)="myMethod()">
+    Demo button
+  </button>
+  <h1 [class.red]="h1Style">helllo one</h1>
+  <h3 [ngClass]="{
+    'blue': h3Style,
+    'large': !h3Style
+  }">hello three
+  </h3>
+  <h1 [style.color]="h1Style ?  'red': 'blue'">helllo one</h1>
+  <h3 [ngStyle]="{
+    'color': h1Style ? 'blue' : 'red',
+    'fontSize': !h3Style ? '40px' : '60px'
+  }">hello three
+  </h3>
+
+</div>
